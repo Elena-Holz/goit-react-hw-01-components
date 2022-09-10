@@ -1,0 +1,22 @@
+
+    .transaction_history {
+            width: 50%;
+            margin-bottom: 5px;
+            border: 1px solid #dddddd;
+            border-collapse: collapse;
+        }
+    
+    .transaction_history th {
+            font-weight: bold;
+            font-size: 14px;
+            padding: 5px;
+            background: #a7e2f8;
+            border: 1px solid #c4c3c3;
+        }
+    
+    .transaction_history td {
+        font-size: 12px;
+        border: 1px solid #c4c3c3;
+            padding: 5px;
+            text-align: center;
+        }

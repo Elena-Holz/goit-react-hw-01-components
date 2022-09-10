@@ -1,0 +1,44 @@
+@import-normalize;
+
+.statistics {
+    display: block;
+    box-shadow: 5px 12px 16px 6px rgba(138, 137, 136, 0.617);
+    width: 300px;
+}
+
+.title {
+    font-size: 18px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.statlist {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    background-color: rgb(232, 240, 246);
+} 
+
+.item {
+    display: block;
+    padding: 5px;
+    width: calc((100% - 10px) / 5);
+    text-align: center;
+    box-shadow: 1px 2px 1px 1px rgba(219, 218, 217, 0.617);
+    
+}
+
+.label {
+    display: block;
+    font-size: 16px;
+    align-items: center;
+    color: black;
+}
+ 
+.percentage {
+    display: block;
+    font-size: 18px;
+    align-items: center;
+    color: black;
+}

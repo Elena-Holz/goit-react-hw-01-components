@@ -1,32 +1,32 @@
-import css from 'components/Profile/Profile.module.css'
-// import PropTypes from 'prop-types';
+import css from 'components/Profile/Profile.module.css';
+import PropTypes from 'prop-types';
 
-export const Profile = ({ user }) => {
+export const Profile = ({ tag, username, location, avatar, stats }) => {
     return (
         <div className={css.profile}>
             <div className={css.description}>
                 <img
-                    src="https://cdn-icons-png.flaticon.com/512/2922/2922506.png"
+                    src={avatar}
                     alt="User avatar"
-                    className="avatar"
+                    className={css.avatar}
                 />
-                <p className={css.name}>DFGJK</p>
-                <p className={css.tag}>gjgkhl</p>
-                <p className={css.location}>jkkl;</p>
+                <p className={css.name}>{username}</p>
+                <p className={css.tag}>{tag}</p>
+                <p className={css.location}>{location}</p>
             </div>
 
-            <ul className={CSS.stats}>
-                <li>
+            <ul className={css.stats}>
+                <li className={css.list}>
                     <span className={css.label}>Followers</span>
-                    <span className={css.quantity}>jkkl</span>
+                    <span className={css.quantity}>{stats.followers}</span>
                 </li>
-                <li>
+                <li className={css.list}>
                     <span className={css.label}>Views</span>
-                    <span className={css.quantity}>hjk</span>
+                    <span className={css.quantity}>{stats.views}</span>
                 </li>
-                <li>
+                <li className={css.list}>
                     <span className={css.label}>Likes</span>
-                    <span className={css.quantity}>hjk.l</span>
+                    <span className={css.quantity}>{stats.likes}</span>
                 </li>
             </ul>
         </div>
@@ -34,18 +34,10 @@ export const Profile = ({ user }) => {
 }
 
 
-// Profile.propTypes = {
+Profile.propTypes = {
 
-//     name: PropTypes.string.isRequired,
-//     tag: PropTypes.string.isRequired,
-//     location: PropTypes.string.isRequired,
-//     stats: PropTypes.arrayOf (
-//         PropTypes.exact ({
-//             followers: PropTypes.number.isRequired,
-//             views: PropTypes.number.isRequired,
-//             likes: PropTypes.number.isRequired,
-//         })
-//     ),   
-//     // avatar: PropTypes.string,
- 
-// };
+    username: PropTypes.string.isRequired,
+    tag: PropTypes.string.isRequired,
+    location: PropTypes.string.isRequired,
+    stats: PropTypes.objectOf(PropTypes.number.isRequired),
+}
