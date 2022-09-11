@@ -20,7 +20,7 @@ export const App = () => {
       }}
     >
       <div
-        tyle={{
+        style={{
           flexDirection: 'column',
         }}
       >
